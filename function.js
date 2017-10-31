@@ -1,8 +1,13 @@
 'use strict';
 
 //Variables-Data--------------------------------------------------------------------------->
-var mode = "idle";
 
+var modes = {
+  food: foods,
+  travel: destinations,
+  prize: prizes,
+  custom: customs
+};
 
 
 //FOOD------------------------------------------------------------------------------------->
