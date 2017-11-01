@@ -90,3 +90,45 @@ h1 {
   top: 30%;
   left: 30%;
 }
+
+.logo {
+  width: 50%;
+  height: 50%;
+}
+
+#container {
+  height: 96vh;
+  box-shadow: 0em 0em 1em #DCDCDC;
+  margin: 1em;
+  background-color: #7bf7ab;
+  animation: fadeIn 1s;
+}
+
+/*rosponsive?*/
+
+header, footer, main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*min-height: 200px;*/
+}
+
+#div-high {
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1s;
+}
+
+#div-mid {
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1s;
+}
+
+#div-low {
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1s;
+  margin: 100% 0 0 10%;
+}

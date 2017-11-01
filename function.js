@@ -2,12 +2,12 @@
 
 //Variables-Data--------------------------------------------------------------------------->
 
-var modes = {
-  food: foods,
-  travel: destinations,
-  prize: prizes,
-  custom: customs
-};
+// var modes = {
+//   food: foods,
+//   travel: destinations,
+//   prize: prizes,
+//   custom: customs
+// };
 
 
 //FOOD------------------------------------------------------------------------------------->
@@ -58,6 +58,7 @@ var foods = [{
 ];
 
 //TRAVEL------------------------------------------------------------------------------------->
+
 var destinations = [{
     name: "Bali, Indonesia",
     image: "./images/destinations/bali.png"
@@ -114,7 +115,7 @@ var destinations = [{
 
 
 //PRIZES------------------------------------------------------------------------------------->
-var prizes = [];
+// var prizes = [];
 
 
 //CUSTOM------------------------------------------------------------------------------------->
@@ -126,8 +127,26 @@ var custom = {
 
 var customs = [];
 
-
-
+//DICE------------------------------------------------------------------------------------->
+var dice = [{
+  name: "1",
+  image: "./images/dice/d1.png"
+}, {
+  name: "2",
+  image: "./images/dice/d2.png"
+}, {
+  name: "3",
+  image: "./images/dice/d3.png"
+}, {
+  name: "4",
+  image: "./images/dice/d4.png"
+}, {
+  name: "5",
+  image: "./images/dice/d5.png"
+}, {
+  name: "6",
+  image: "./images/dice/d6.png"
+}];
 
 
 
@@ -190,6 +209,10 @@ function travel_rnd() {
 
 function custom_rnd() {
   result(custom);
+}
+
+function dice_rnd() {
+  result(dice);
 }
 
 

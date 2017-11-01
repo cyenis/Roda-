@@ -3,27 +3,33 @@
 // function App(container), buildSplash(), buildModes(), buildRoulette(), buildResult()
 
 function App(main) {
-  var self = this;
+  // var self = this;
 
-  self.modes = [{
-    label: 'Where shall i travel to?',
-    className: 'destinations',
-    imgUrl: './images/travelicon.png'
-  }, {
-    label: 'What shall i eat?',
-    className: 'foods',
-    imgUrl: './images/foodicon.png'
-  }, {
-    label: 'Make your Own randomizer',
-    className: 'custom',
-    imgUrl: './images/customicon.png'
-  }, {
-    label: 'Prize',
-    className: 'prize',
-    imgUrl: './images/prizeicon.png'
-  }];
+  this.modes = [{
+      label: 'Where shall i travel to?',
+      className: 'destinations',
+      imgUrl: './images/travelicon.png'
+    }, {
+      label: 'What shall i eat?',
+      className: 'foods',
+      imgUrl: './images/foodicon.png'
+    }, {
+      label: 'Make your Own randomizer',
+      className: 'custom',
+      imgUrl: './images/customicon.png'
+    }, {
+      label: 'Prize',
+      className: 'prize',
+      imgUrl: './images/prizeicon.png'
+    },
+    {
+      label: 'Dice',
+      className: 'dice',
+      imgUrl: './images/diceicon.png'
+    }
+  ];
 
-  self.main = main;
+  this.main = main;
 }
 
 //Start Screen----------------------------------------->
@@ -32,20 +38,20 @@ function App(main) {
 App.prototype.buildSplash = function() {
   var self = this;
 
-  var divAround = document.createElement('div');
-  divAround.setAttribute('id', 'div-around');
-  self.main.appendChild(divAround);
+  var divMid = document.createElement('div');
+  divMid.setAttribute('id', 'div-mid');
+  self.main.appendChild(divMid);
 
   // Name of the Game/Branding:
   // var text = document.createElement('h1');
   // text.innerHTML = 'Roda!'.toUpperCase();
   // text.setAttribute('class', 'padding-start-screen');
-  // divAround.appendChild(text);
+  // divMid.appendChild(text);
 
-  var el = document.createElement('logo');
-  el.innerHTML = "<img src=\"./images/roda-logo.png\" width=\"250px\" height=\"250px\">";
-  el.setAttribute('class', 'logo');
-  divAround.appendChild(el);
+  // var el = document.createElement('logo');
+  // el.innerHTML = "<img src=\"./images/roda-logo.png\" width=\"250px\" height=\"250px\">";
+  // el.setAttribute('class', 'logo');
+  // divMid.appendChild(el);
 
   // App.prototype.description = function() {
   //   console.log('Life is the sum of random facts!');
@@ -56,10 +62,10 @@ App.prototype.buildSplash = function() {
   startButton.innerHTML = "Let's roll!".toUpperCase();
   startButton.setAttribute('class', 'button');
   startButton.setAttribute('id', 'attention-btn');
-  divAround.appendChild(startButton);
+  divMid.appendChild(startButton);
 
   startButton.addEventListener('click', function() {
-    divAround.remove();
+    divMid.remove();
     self.buildModes();
   });
 
@@ -70,9 +76,9 @@ App.prototype.buildSplash = function() {
 
 App.prototype.buildModes = function() {
   var self = this;
-  var divAround = document.createElement('div');
-  divAround.setAttribute('id', 'div-around');
-  self.main.appendChild(divAround);
+  var divMid = document.createElement('div');
+  divMid.setAttribute('id', 'div-mid');
+  self.main.appendChild(divMid);
 
   for (var ix = 0; ix < self.modes.length; ix++) {
     var mode = document.createElement('div');
@@ -94,70 +100,110 @@ App.prototype.buildModes = function() {
     mode.setAttribute('data-index', ix);
 
     mode.addEventListener('click', function(event) {
-      divAround.remove();
+      divMid.remove();
       self.buildRoulette(event.currentTarget.getAttribute('data-index'));
     });
 
-    divAround.appendChild(mode);
+    divMid.appendChild(mode);
   }
 };
 
 
 //ROULETTE---------------------------------------------------->
+
 App.prototype.buildRoulette = function(modeIndex) {
   console.log(modeIndex);
 
-  var self = this;
-  var divAround = document.createElement('div');
-  divAround.setAttribute('id', 'div-around');
-  self.main.appendChild(divAround);
 
+  var self = this;
+  //divHigh----------------->
+  var divHigh = document.createElement('div');
+  divHigh.setAttribute('id', 'div-high');
+  self.main.appendChild(divHigh);
+
+  //description
   var text = document.createElement('h2');
   text.innerText = self.modes[modeIndex].label;
-  divAround.appendChild(text);
+  divHigh.appendChild(text);
 
 
+  //divMid----------------->
+  var divMid = document.createElement('div');
+  divMid.setAttribute('id', 'div-mid');
+  self.main.appendChild(divMid);
+
+
+  //wheel
   var icon = document.createElement('image');
   icon.innerHTML = ("<img src=" + '"' + self.modes[modeIndex].imgUrl + '"' + "width=300px" +
     "height=300px" +
     '>');
   icon.setAttribute('class', 'icon');
-  divAround.appendChild(icon);
+  divMid.appendChild(icon);
 
+
+  //WHEEL----->
   var wheel = document.createElement('wheel');
-  wheel.innerHTML = ("<img src=./images/magic-wheel.png" + " width=300px " +
+  wheel.innerHTML = ("<img src=./images/laroda.png" + " width=300px " +
     " height=300px " +
     ' >');
   wheel.setAttribute('class', 'roulette-image ');
   wheel.setAttribute('id', 'wheel');
-  divAround.appendChild(wheel);
+  divMid.appendChild(wheel);
 
+  //POINTER----->
   var pointer = document.createElement('pointer');
   pointer.innerHTML = ("<img src= ./images/pointer.png + " + "width=300px" +
     "height=300px" +
     '>');
   pointer.setAttribute('class', 'icon');
-  divAround.appendChild(pointer);
+  divMid.appendChild(pointer);
 
+  //ANSWERS--------->
   var answers = document.createElement('answers');
   answers.innerText = '';
   answers.setAttribute('class', 'answers');
-  divAround.appendChild(answers);
+  divMid.appendChild(answers);
 
-  divAround.addEventListener('click', function() {
+
+  //divlow----------------->
+  var divlow = document.createElement('div');
+  divMid.setAttribute('id', 'div-low');
+  divMid.appendChild(divlow);
+
+  // backToModes button---------------------------->
+  var backButton = document.createElement('button');
+  backButton.innerHTML = "Back to Modes".toUpperCase();
+  backButton.setAttribute('class', 'button');
+  divlow.appendChild(backButton);
+
+  backButton.addEventListener('click', function() {
+    divHigh.remove();
+    divMid.remove();
+    divlow.remove();
+    self.buildModes();
+  });
+
+
+
+  //CLICK CLICK CLICK CLICK CLICK CLICK CLICK CLICK----->
+
+  divMid.addEventListener('click', function() {
     self.buildResult();
     console.log('clicked');
     // wheel.className = "roulette";
 
+    //ROLL TIME ------------>
 
-    function flash(modeIndex) {
+    function flash() {
       function random(array) {
         var random = Math.floor(Math.random() * array.length);
         return array[random];
       }
       wheel.className = "roulette";
       var nIntervId = setInterval(function() {
-          var flush = random(this.destinations);
+          // var flush = random(self.modes[modeIndex].className);
+          var flush = random(this.modes[modeIndex].className);
           answers.innerText = flush.name;
           icon.innerHTML = ("<img src=" + '"' + flush.image + '"' + "width=300px" +
             "height=300px" +
@@ -167,7 +213,9 @@ App.prototype.buildRoulette = function(modeIndex) {
       window.setTimeout(function() {
         clearInterval(nIntervId);
         //console.log("the result is: " + random(array).name);
-        var answer = this.random(this.destinations);
+        // var answer = random(self.modes[modeIndex].className);
+        var answer = random(this.destinations);
+
         answers.innerText = answer.name;
         icon.innerHTML = ("<img src=" + '"' + answer.image + '"' + "width=300px" +
           "height=300px" +
@@ -175,18 +223,10 @@ App.prototype.buildRoulette = function(modeIndex) {
         wheel.className = "roulette-image";
       }, 3000);
     }
-    flash(modeIndex);
-
-
-
-
-
-
+    flash();
 
 
   });
-
-
 
 
 };
