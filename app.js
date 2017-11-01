@@ -116,13 +116,6 @@ App.prototype.buildRoulette = function(modeIndex) {
   text.innerText = self.modes[modeIndex].label;
   divAround.appendChild(text);
 
-  var wheel = document.createElement('wheel');
-  wheel.innerHTML = ("<img src=./images/roulette.png" + " width=300px " +
-    " height=300px " +
-    ' >');
-  wheel.setAttribute('class', 'roulette-image ');
-  wheel.setAttribute('id', 'wheel');
-  divAround.appendChild(wheel);
 
   var icon = document.createElement('image');
   icon.innerHTML = ("<img src=" + '"' + self.modes[modeIndex].imgUrl + '"' + "width=300px" +
@@ -130,6 +123,14 @@ App.prototype.buildRoulette = function(modeIndex) {
     '>');
   icon.setAttribute('class', 'icon');
   divAround.appendChild(icon);
+
+  var wheel = document.createElement('wheel');
+  wheel.innerHTML = ("<img src=./images/magic-wheel.png" + " width=300px " +
+    " height=300px " +
+    ' >');
+  wheel.setAttribute('class', 'roulette-image ');
+  wheel.setAttribute('id', 'wheel');
+  divAround.appendChild(wheel);
 
   var pointer = document.createElement('pointer');
   pointer.innerHTML = ("<img src= ./images/pointer.png + " + "width=300px" +
@@ -140,6 +141,7 @@ App.prototype.buildRoulette = function(modeIndex) {
 
   var answers = document.createElement('answers');
   answers.innerText = '';
+  answers.setAttribute('class', 'answers');
   divAround.appendChild(answers);
 
   divAround.addEventListener('click', function() {
@@ -155,13 +157,21 @@ App.prototype.buildRoulette = function(modeIndex) {
       }
       wheel.className = "roulette";
       var nIntervId = setInterval(function() {
-          answers.innerText = random(self.modes[modeIndex].className).name;
+          var flush = random(this.destinations);
+          answers.innerText = flush.name;
+          icon.innerHTML = ("<img src=" + '"' + flush.image + '"' + "width=300px" +
+            "height=300px" +
+            '>');
         },
         100);
       window.setTimeout(function() {
         clearInterval(nIntervId);
         //console.log("the result is: " + random(array).name);
-        answers.innerText = this.random(this.destinations).name;
+        var answer = this.random(this.destinations);
+        answers.innerText = answer.name;
+        icon.innerHTML = ("<img src=" + '"' + answer.image + '"' + "width=300px" +
+          "height=300px" +
+          '>');
         wheel.className = "roulette-image";
       }, 3000);
     }

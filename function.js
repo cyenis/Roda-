@@ -60,55 +60,55 @@ var foods = [{
 //TRAVEL------------------------------------------------------------------------------------->
 var destinations = [{
     name: "Bali, Indonesia",
-    image: ""
+    image: "./images/destinations/bali.png"
   }, {
     name: "London, United Kingdom",
-    image: ""
+    image: "./images/destinations/london.png"
   }, {
     name: "Paris, France",
-    image: ""
+    image: "./images/destinations/paris.png"
   }, {
     name: "Rome, Italy",
-    image: ""
+    image: "./images/destinations/rome.png"
   }, {
     name: "New York City, New York",
-    image: ""
+    image: "./images/destinations/newyork.png"
   }, {
     name: "Crete, Greece",
-    image: ""
+    image: "./images/destinations/creta.png"
   }, {
     name: "Barcelona, Spain",
-    image: ""
+    image: "./images/destinations/barcelona.png"
   }, {
     name: "Siem Reap, Cambodia",
-    image: ""
+    image: "./images/destinations/seamreap.png"
   },
   {
     name: "Prague, Czech Republic",
-    image: ""
+    image: "./images/destinations/Prague.png"
   }, {
     name: "Phuket, Thailand",
-    image: ""
+    image: "./images/destinations/thailand.png"
   }, {
     name: "Instambul, Turkey",
-    image: ""
+    image: "./images/destinations/Instambul.png"
   }, {
     name: "Jamaica",
-    image: ""
+    image: "./images/destinations/Jamaica.png"
   }, {
     name: "Hoi An, Vietnam",
-    image: ""
+    image: "./images/destinations/HoiAn.png"
   }, {
     name: "Roatan, Bay Islands",
-    image: ""
+    image: "./images/destinations/Roatan.png"
   },
   {
     name: "Marakech, Morocco",
-    image: ""
+    image: "./images/destinations/marakech.png"
   },
   {
     name: "Rio de Janeiro, Brazil",
-    image: ""
+    image: "./images/destinations/rio.png"
   },
 ];
 
