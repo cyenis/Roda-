@@ -3,6 +3,9 @@
   "unused": true,
   "strict": "global",
   "globals": {
-    "console": true
+    "console": true,
+    "document": true,
+    "$": true,
+    "App": true
   }
 }
