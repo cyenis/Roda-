@@ -163,7 +163,7 @@ function text_shuffle(array) {
     clearInterval(nIntervId);
     //console.log("the result is: " + random(array).name);
     document.getElementById("input").innerHTML = random(array).name;
-    document.getElementById("wheel").className = "image";
+    document.getElementById("wheel").className = "roulette-image";
   }, 3000);
 }
 

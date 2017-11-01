@@ -6,19 +6,27 @@ function App(main) {
   var self = this;
 
   self.modes = [{
-    label: 'Travel',
-    className: 'travel',
-    imgUrl: 'http://'
+    label: 'Where shall i travel to?',
+    className: 'destinations',
+    imgUrl: './images/travelicon.png'
   }, {
-    label: 'Food',
-    className: 'food',
-    imgUrl: 'http://'
+    label: 'What shall i eat?',
+    className: 'foods',
+    imgUrl: './images/foodicon.png'
+  }, {
+    label: 'Make your Own randomizer',
+    className: 'custom',
+    imgUrl: './images/customicon.png'
+  }, {
+    label: 'Prize',
+    className: 'prize',
+    imgUrl: './images/prizeicon.png'
   }];
 
   self.main = main;
 }
 
-//function buildSplash() {}
+//Start Screen----------------------------------------->
 
 
 App.prototype.buildSplash = function() {
@@ -28,48 +36,40 @@ App.prototype.buildSplash = function() {
   divAround.setAttribute('id', 'div-around');
   self.main.appendChild(divAround);
 
-  // Name of the Game:
-  var text = document.createElement('h1');
-  text.innerHTML = 'Roda!'.toUpperCase();
-  text.setAttribute('class', 'padding-start-screen');
-  divAround.appendChild(text);
+  // Name of the Game/Branding:
+  // var text = document.createElement('h1');
+  // text.innerHTML = 'Roda!'.toUpperCase();
+  // text.setAttribute('class', 'padding-start-screen');
+  // divAround.appendChild(text);
 
+  var el = document.createElement('logo');
+  el.innerHTML = "<img src=\"./images/roda-logo.png\" width=\"250px\" height=\"250px\">";
+  el.setAttribute('class', 'logo');
+  divAround.appendChild(el);
 
-  App.prototype.description = function() {
-    console.log('Life is the sum of random facts!');
-  };
+  // App.prototype.description = function() {
+  //   console.log('Life is the sum of random facts!');
+  // };
 
-  // Display the Start-Button:
+  // Roll-Button:
   var startButton = document.createElement('button');
   startButton.innerHTML = "Let's roll!".toUpperCase();
   startButton.setAttribute('class', 'button');
   startButton.setAttribute('id', 'attention-btn');
   divAround.appendChild(startButton);
 
-  // Display the Rules-Button:
-  // var rulesButton = document.createElement('button');
-  // rulesButton.innerHTML = "Rules".toUpperCase();
-  // rulesButton.setAttribute('class', 'button');
-  // rulesButton.setAttribute('id', 'ghost-btn');
-  // divAround.appendChild(rulesButton);
-  //Add Click-Events:
   startButton.addEventListener('click', function() {
     divAround.remove();
     self.buildModes();
   });
-  //
-  // resetButton.addEventListener('click', function() {
-  //   self.rules();
-  // });
 
 };
 
-
+//MODES------------------------------------------------>
 
 
 App.prototype.buildModes = function() {
   var self = this;
-
   var divAround = document.createElement('div');
   divAround.setAttribute('id', 'div-around');
   self.main.appendChild(divAround);
@@ -78,13 +78,21 @@ App.prototype.buildModes = function() {
     var mode = document.createElement('div');
     mode.classList.add(self.modes[ix].className);
 
+    //Mode icon
+    var img = document.createElement('image');
+    img.innerHTML = ("<img src=" + '"' + self.modes[ix].imgUrl + '"' + "width=250px" +
+      "height=250px" +
+      '>');
+    img.setAttribute('class', 'mode-icons');
+    mode.appendChild(img);
+
+    //Mode description
     var text = document.createElement('h2');
     text.innerText = self.modes[ix].label;
-
-    //mode.appendChild(img);
     mode.appendChild(text);
 
     mode.setAttribute('data-index', ix);
+
     mode.addEventListener('click', function(event) {
       divAround.remove();
       self.buildRoulette(event.currentTarget.getAttribute('data-index'));
@@ -94,12 +102,104 @@ App.prototype.buildModes = function() {
   }
 };
 
+
+//ROULETTE---------------------------------------------------->
 App.prototype.buildRoulette = function(modeIndex) {
   console.log(modeIndex);
 
+  var self = this;
+  var divAround = document.createElement('div');
+  divAround.setAttribute('id', 'div-around');
+  self.main.appendChild(divAround);
+
+  var text = document.createElement('h2');
+  text.innerText = self.modes[modeIndex].label;
+  divAround.appendChild(text);
+
+  var wheel = document.createElement('wheel');
+  wheel.innerHTML = ("<img src=./images/roulette.png" + " width=300px " +
+    " height=300px " +
+    ' >');
+  wheel.setAttribute('class', 'roulette-image ');
+  wheel.setAttribute('id', 'wheel');
+  divAround.appendChild(wheel);
+
+  var icon = document.createElement('image');
+  icon.innerHTML = ("<img src=" + '"' + self.modes[modeIndex].imgUrl + '"' + "width=300px" +
+    "height=300px" +
+    '>');
+  icon.setAttribute('class', 'icon');
+  divAround.appendChild(icon);
+
+  var pointer = document.createElement('pointer');
+  pointer.innerHTML = ("<img src= ./images/pointer.png + " + "width=300px" +
+    "height=300px" +
+    '>');
+  pointer.setAttribute('class', 'icon');
+  divAround.appendChild(pointer);
+
+  var answers = document.createElement('answers');
+  answers.innerText = '';
+  divAround.appendChild(answers);
+
+  divAround.addEventListener('click', function() {
+    self.buildResult();
+    console.log('clicked');
+    // wheel.className = "roulette";
+
+
+    function flash(modeIndex) {
+      function random(array) {
+        var random = Math.floor(Math.random() * array.length);
+        return array[random];
+      }
+      wheel.className = "roulette";
+      var nIntervId = setInterval(function() {
+          answers.innerText = random(self.modes[modeIndex].className).name;
+        },
+        100);
+      window.setTimeout(function() {
+        clearInterval(nIntervId);
+        //console.log("the result is: " + random(array).name);
+        answers.innerText = this.random(this.destinations).name;
+        wheel.className = "roulette-image";
+      }, 3000);
+    }
+    flash(modeIndex);
+
+
+
+
+
+
+
+
+  });
+
+
+
+
 };
 
+
+// //RESULT----------------------------------------------------->
 App.prototype.buildResult = function() {
+
+
+  //   var self = this;
+  //
+  //   function flash() {
+  //     var nIntervId = setInterval(function() {
+  //         document.getElementById("input").innerHTML = random(array).name;
+  //       },
+  //       100);
+  //     window.setTimeout(function() {
+  //       clearInterval(nIntervId);
+  //       //console.log("the result is: " + random(array).name);
+  //       document.getElementById("input").innerHTML = random(array).name;
+  //       document.getElementById("wheel").className = "roulette-image";
+  //     }, 3000);
+  //   }
 
 };
 
