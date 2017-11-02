@@ -6,51 +6,81 @@ html {
   box-sizing: inherit;
 }
 
-#input {
+/*Roullete animations, styles, places :*/
+
+#rouletteGraph {
+  position: relative;
+  left: 10vw;
+  /*vertical-align: middle;
+  border-style: none;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;*/
+}
+
+.picturesRound {
   position: absolute;
-  top: 80%;
-  left: 55%;
-  width: 120px;
-  height: 120px;
-  margin: -60px 0 0 -60px;
-  font-size: 30px
+  vertical-align: middle;
+  border-style: none;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 50%;
+  top: 10vw;
+  left: 10vw;
+}
+
+#roulettePlaceholder {
+  position: relative;
+}
+
+.wheel {
+  position: absolute;
+  vertical-align: middle;
+  border-style: none;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
 }
 
 .answers {
-  position: absolute;
-  top: 50%;
-  left: 38%;
-  width: 200px;
-  height: 200px;
-  margin: -60px 0 0 -60px;
-  color: white
+  position: relative;
+  top: -50vw;
+  /* text-align: center; */
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 300;
+  /* font-size: 35px; */
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
 }
 
 .icon {
   position: absolute;
-  top: 30%;
-  left: 30%;
-  width: 300px;
-  height: 300px;
-  margin: -60px 0 0 -60px;
+  width: 60vw;
+  height: 60vw;
+  /*margin: -60px 0 0 -60px;*/
 }
 
-.roulette-image {
-  position: absolute;
-  top: 30%;
-  left: 30%;
+/* wheel-static*/
+
+.wheelStatic {
+  /*position: absolute;
   width: 300px;
-  height: 300px;
-  margin: -60px 0 0 -60px;
+  height: 300px;*/
+  /*margin: -60px 0 0 -60px;*/
 }
 
-.roulette {
+/*wheel-Animations*/
+
+.wheelSpin {
   position: absolute;
-  top: 30%;
-  left: 30%;
-  width: 300px;
-  height: 300px;
-  margin: -60px 0 0 -60px;
+  width: 60vw;
+  height: 60vw;
+  /*margin: -60px 0 0 -60px;*/
   -webkit-animation: spin 1s linear infinite;
   -moz-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
@@ -76,10 +106,10 @@ html {
 }
 
 button {
-  margin: 2%;
+  /*margin: 2%;
   padding: 5% 5%;
   font-size: 1.2rem;
-  font-weight: bolder;
+  font-weight: bolder;*/
 }
 
 h1 {
@@ -91,28 +121,67 @@ h1 {
   left: 30%;
 }
 
+/*Start Screen etc*/
+
 .logo {
-  width: 50%;
+  /*width: 50%;
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;*/
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;
 }
 
-#container {
+.quote {
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 300;
+  font-size: 25px;
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+#start-button {
+  display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+/*#container {
   height: 96vh;
   box-shadow: 0em 0em 1em #DCDCDC;
   margin: 1em;
   background-color: #7bf7ab;
   animation: fadeIn 1s;
+}*/
+
+/*responsive?*/
+
+#modes {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;*/
 }
 
-/*rosponsive?*/
-
-header, footer, main {
+/*header, main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /*min-height: 200px;*/
-}
+}*/
 
 #div-high {
   display: flex;
@@ -121,20 +190,51 @@ header, footer, main {
 }
 
 #div-mid {
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  animation: fadein 1s;
+  animation: fadein 1s;*/
 }
 
-#div-low {
+.div-low {
+  position: absolute;
   display: flex;
   flex-direction: column;
   animation: fadein 1s;
   margin: 30% 0 0 10%;
+  top: 111vw;
+  left: 24vw;
+}
+
+#back-button {
+  display: flex;
+  flex-direction: column;
+  animation: fadein 1s;
+  top: -30vw;
+  /*display: block;
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;*/
+}
+
+.container-fluid {
+  /*display: block;*/
+  /*max-width: 500px;*/
+  /*margin: 0 auto;*/
+  /*width: 10%;*/
 }
 
 /* Heart Icon
 --------------------------------------------- */
+
+#footer {
+  /*max-width: 300px;*/
+  margin: 0 auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 90%;
+  text-align: center;
+}
 
 .site-footer .icon {
   font-size: 20px;
@@ -146,6 +246,32 @@ header, footer, main {
   margin-right: 2px;
 }
 
-.quote {
-  font-family: 'Cabin Sketch', cursive;
+/*bootstrap*/
+
+.selector-for-some-widget {
+  box-sizing: content-box;
 }
+
+.col-sm-4 {
+  /*display: flex;*/
+  /*justify-content: center;
+  align-items: center;
+  display: block;
+  max-width: 150px;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;*/
+}
+
+/*TRASH---------------*/
+
+/*#input {
+  position: absolute;
+  top: 80%;
+  left: 55%;
+  width: 120px;
+  height: 120px;
+  margin: -60px 0 0 -60px;
+  font-size: 30px
+}*/
