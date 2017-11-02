@@ -130,5 +130,22 @@ header, footer, main {
   display: flex;
   flex-direction: column;
   animation: fadein 1s;
-  margin: 100% 0 0 10%;
+  margin: 30% 0 0 10%;
+}
+
+/* Heart Icon
+--------------------------------------------- */
+
+.site-footer .icon {
+  font-size: 20px;
+}
+
+.site-footer .love .icon {
+  font-size: 12px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.quote {
+  font-family: 'Cabin Sketch', cursive;
 }

@@ -6,6 +6,10 @@
     "console": true,
     "document": true,
     "$": true,
-    "App": true
+    "App": true,
+    "setInterval":true,
+    "clearInterval":true,
+    "setTimeout":true,
+    "window":true
   }
 }

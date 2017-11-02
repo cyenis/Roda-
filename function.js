@@ -148,6 +148,12 @@ var dice = [{
   image: "./images/dice/d6.png"
 }];
 
+var items = {
+  destinations: destinations,
+  dice: dice,
+  foods: foods
+};
+
 
 
 
