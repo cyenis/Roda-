@@ -20,35 +20,45 @@ function App(main) {
       imgUrl: './images/icons/diceicon.png'
     },
     {
+      label: 'Euro',
+      className: 'euro',
+      imgUrl: './images/icons/euroicon.png'
+    },
+    {
+      label: 'WebDev',
+      className: 'webdev',
+      imgUrl: './images/icons/webdevicon.png'
+    },
+    {
       label: 'Alcohol',
       className: 'alcohol',
       imgUrl: './images/icons/Alcoholicon.png'
     },
-    {
-      label: 'Sweet',
-      className: 'sweet',
-      imgUrl: './images/icons/sweeticon.png'
-    },
-    {
-      label: 'Music',
-      className: 'Music',
-      imgUrl: './images/icons/musicicon.png'
-    },
-    {
-      label: 'Podcast',
-      className: 'podcast',
-      imgUrl: './images/icons/podcasticon.png'
-    },
-    {
-      label: 'Now Playing',
-      className: 'moviesnow',
-      imgUrl: './images/icons/movienowicon.png'
-    },
-    {
-      label: 'Movie',
-      className: 'moviehome',
-      imgUrl: './images/icons/moviehomeicon.png'
-    },
+    // {
+    //   label: 'Sweet',
+    //   className: 'sweet',
+    //   imgUrl: './images/icons/sweeticon.png'
+    // },
+    // {
+    //   label: 'Music',
+    //   className: 'music',
+    //   imgUrl: './images/icons/musicicon.png'
+    // },
+    // {
+    //   label: 'Podcast',
+    //   className: 'podcast',
+    //   imgUrl: './images/icons/podcasticon.png'
+    // },
+    // {
+    //   label: 'Now Playing',
+    //   className: 'moviesnow',
+    //   imgUrl: './images/icons/movienowicon.png'
+    // },
+    // {
+    //   label: 'Movie',
+    //   className: 'moviehome',
+    //   imgUrl: './images/icons/moviehomeicon.png'
+    // },
     {
       label: 'Gift',
       className: 'gift',
@@ -57,15 +67,15 @@ function App(main) {
       label: 'Game',
       className: 'games',
       imgUrl: './images/icons/gameicon.png'
-    },
-    {
-      label: 'Choice',
-      className: 'custom',
-      imgUrl: './images/icons/customicon.png'
-    }, {
-      label: 'Prize',
-      className: 'prize',
-      imgUrl: './images/icons/prizeicon.png'
+      // },
+      // {
+      //   label: 'Choice',
+      //   className: 'custom',
+      //   imgUrl: './images/icons/customicon.png'
+      // }, {
+      //   label: 'Prize',
+      //   className: 'prize',
+      //   imgUrl: './images/icons/prizeicon.png'
     }
   ];
 
@@ -89,7 +99,7 @@ App.prototype.buildSplash = function() {
   divHigh.appendChild(text);
 
   var divMid = document.createElement('div');
-  divMid.setAttribute('id', 'div-mid');
+  divMid.setAttribute('id', 'start-button');
   self.main.appendChild(divMid);
 
   // var el = document.createElement('logo');
@@ -107,7 +117,7 @@ App.prototype.buildSplash = function() {
   startButton.setAttribute("class",
     "btn btn-primary");
   startButton.setAttribute('id', 'start-button');
-  self.main.appendChild(startButton);
+  divMid.appendChild(startButton);
 
   startButton.addEventListener('click', function() {
     divHigh.remove();
@@ -125,7 +135,7 @@ App.prototype.buildModes = function() {
   var self = this;
 
   var divHigh = document.createElement('div');
-  divHigh.setAttribute('id', 'quote');
+  divHigh.setAttribute('id', 'pick');
   self.main.appendChild(divHigh);
 
   //Name of the Game/Branding:
@@ -144,18 +154,18 @@ App.prototype.buildModes = function() {
   // divRow.setAttribute('id', 'modes');
   divContainer.appendChild(divRow);
 
-  var divCol1 = document.createElement('div');
-  divCol1.setAttribute('class', '"col-sm-4"');
-  divCol1.setAttribute('id', 'left');
-  divRow.appendChild(divCol1);
+  // var divCol1 = document.createElement('div');
+  // divCol1.setAttribute('class', '"col-sm-4"');
+  // divCol1.setAttribute('id', 'modeC');
+  // divRow.appendChild(divCol1);
+  //
+  // var divCol2 = document.createElement('div');
+  // divCol2.setAttribute('class', '"col-sm-4"');
+  // divCol2.setAttribute('id', 'modeC');
+  // divRow.appendChild(divCol2);
 
-  var divCol2 = document.createElement('div');
-  divCol2.setAttribute('class', '"col-sm-4"');
-  divCol2.setAttribute('id', 'right');
-  divRow.appendChild(divCol2);
 
-
-  for (var ix = 0; ix < self.modes.length; ix += 2) {
+  for (var ix = 0; ix < self.modes.length; ix++) {
     var mode = document.createElement('div');
     mode.classList.add(self.modes[ix].className);
 
@@ -182,38 +192,38 @@ App.prototype.buildModes = function() {
       divContainer.remove();
       self.buildRoulette(event.currentTarget.getAttribute('data-index'));
     });
-    divCol1.appendChild(mode);
+    divRow.appendChild(mode);
   }
 
-  for (ix = 1; ix < self.modes.length; ix += 2) {
-    var modeR = document.createElement('div');
-    modeR.classList.add(self.modes[ix].className);
-
-    //Mode description
-    var textR = document.createElement('h2');
-    textR.innerText = self.modes[ix].label;
-    modeR.appendChild(textR);
-
-    //Mode icon
-    var imgR = document.createElement('image');
-    imgR.innerHTML = ("<img src=" + '"' + self.modes[ix].imgUrl + '"' + "width=250px" +
-      "height=250px" +
-      '>');
-    imgR.setAttribute('class', 'mode-icons');
-    modeR.appendChild(imgR);
-
-
-
-    modeR.setAttribute('data-index', ix);
-
-    modeR.addEventListener('click', function(event) {
-      divHigh.remove();
-      divRow.remove();
-      divContainer.remove();
-      self.buildRoulette(event.currentTarget.getAttribute('data-index'));
-    });
-    divCol2.appendChild(modeR);
-  }
+  // for (ix = 1; ix < self.modes.length; ix += 2) {
+  //   var modeR = document.createElement('div');
+  //   modeR.classList.add(self.modes[ix].className);
+  //
+  //   //Mode description
+  //   var textR = document.createElement('h2');
+  //   textR.innerText = self.modes[ix].label;
+  //   modeR.appendChild(textR);
+  //
+  //   //Mode icon
+  //   var imgR = document.createElement('image');
+  //   imgR.innerHTML = ("<img src=" + '"' + self.modes[ix].imgUrl + '"' + "width=250px" +
+  //     "height=250px" +
+  //     '>');
+  //   imgR.setAttribute('class', 'mode-icons');
+  //   modeR.appendChild(imgR);
+  //
+  //
+  //
+  //   modeR.setAttribute('data-index', ix);
+  //
+  //   modeR.addEventListener('click', function(event) {
+  //     divHigh.remove();
+  //     divRow.remove();
+  //     divContainer.remove();
+  //     self.buildRoulette(event.currentTarget.getAttribute('data-index'));
+  //   });
+  //   divRow.appendChild(modeR);
+  // }
 
 
 };
@@ -272,11 +282,11 @@ App.prototype.buildRoulette = function(modeIndex) {
   // pointer.setAttribute('class', 'icon');
   divGraph.appendChild(pointer);
 
-  //ANSWERS--------->
-  // this.answers = document.createElement('answers');
-  // this.answers.innerText = '';
-  // this.answers.setAttribute('class', 'answers');
-  // divMid.appendChild(this.answers);
+  // ANSWERS--------->
+  this.answers = document.createElement('answers');
+  this.answers.innerText = '';
+  this.answers.setAttribute('class', 'answers');
+  divGraph.appendChild(this.answers);
 
 
   //divlow----------------->
@@ -285,10 +295,10 @@ App.prototype.buildRoulette = function(modeIndex) {
   self.main.appendChild(divlow);
 
   // //ANSWERS--------->
-  this.answers = document.createElement('answers');
-  this.answers.innerText = '';
-  this.answers.setAttribute('class', 'answers');
-  divlow.appendChild(this.answers);
+  // this.answers = document.createElement('answers');
+  // this.answers.innerText = '';
+  // this.answers.setAttribute('class', 'answers');
+  // divlow.appendChild(this.answers);
 
   // //Actions & Urls--------->
   this.actions = document.createElement('actions');
@@ -332,6 +342,8 @@ App.prototype.buildRoulette = function(modeIndex) {
   };
 
 
+
+
   // //RESULT----------------------------------------------------->
   App.prototype.buildResult = function() {
     var self = this;
@@ -339,6 +351,7 @@ App.prototype.buildRoulette = function(modeIndex) {
     this.wheel.className = "wheelSpin";
     var nIntervId = setInterval(function() {
         // var flush = random(self.modes[modeIndex].className);
+        this.audioRoll.play();
         var selections = this.items[self.modes[self.arrayIndex].className];
         console.log(selections);
         flush = self.randomizer(selections);
@@ -357,11 +370,18 @@ App.prototype.buildRoulette = function(modeIndex) {
         '>');
       self.wheel.className = "wheelStatic";
 
-      //Actions:
+      // Actions:
       if (flush.action !== undefined) {
         self.actions.innerText = flush.action;
-        self.links.innerHTML = '<a href="' + flush.urls.foody + '">' + ' <img class="foody-logo" ' + 'src="./images/foody.png">' + '</a>';
+        self.links.innerHTML = '<a href="' + flush.urls.foody + '">' + ' <img class="foody-logo" ' + 'src="./images/foody.png" >' + '</a>';
       }
+
+
+
+      // if (flush.audio !== undefined) {
+      //   var song = flush.audio;
+      //   song.play();
+      // }
 
     }, 3000);
   };

@@ -8,78 +8,150 @@ html {
 
 /*Roullete animations, styles, places :*/
 
+.links {
+  position: absolute;
+  bottom: 15vw;
+  left: 55vw;
+}
+
+.actions {
+  position: absolute;
+  bottom: 24vw;
+  left: 55vw;
+}
+
+.mode-icons {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  /*display: block;
+  max-width: 150px;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;*/
+  */
+}
+
+#modeC {
+  /*padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  max-width: 150px;
+  margin: 0 auto;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;*/
+}
+
+.col-sm-4 {}
+
 #rouletteGraph {
   position: relative;
-  left: 10vw;
-  /*vertical-align: middle;
-  border-style: none;
-  width: 80vw;
-  height: 80vw;
-  border-radius: 50%;*/
+  /* left: 0vw; */
+  width: 30vw;
+  height: 30vw;
+  align-items: center;
 }
 
 .picturesRound {
   position: absolute;
   vertical-align: middle;
   border-style: none;
-  width: 40vw;
-  height: 40vw;
+  width: 75%;
+  height: 75%;
   border-radius: 50%;
-  top: 10vw;
-  left: 10vw;
+  top: 5vw;
+  left: 5vw;
+}
+
+.row img {
+  /* vertical-align: middle; */
+  /* border-style: none; */
+  width: 7vw;
+  margin: 2vw;
+}
+
+.row h2 {
+  font-size: 2vw;
+  width: -2vw;
+  margin: 0.9vw;
+}
+
+.row {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 49vw;
+  position: relative;
+  /* height: 53vw; */
+  margin: 24px;
 }
 
 #roulettePlaceholder {
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
 }
 
 .wheel {
   position: absolute;
+  width: 100%;
+  height: 100%;
   vertical-align: middle;
   border-style: none;
-  width: 60vw;
-  height: 60vw;
+  /* width: 60vw; */
+  /* height: 60vw; */
   border-radius: 50%;
 }
 
 .answers {
-  position: relative;
-  top: -50vw;
-  /* text-align: center; */
+  position: absolute;
+  top: 28vw;
+  left: 11.5vw;
+  text-align: center;
   font-family: 'Cabin Sketch', cursive;
   font-weight: 300;
-  /* font-size: 35px; */
-  display: block;
-  max-width: 300px;
+  font-size: 3vw;
+  /* display: block; */
+  max-width: 273px;
   margin: 0 auto;
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 0px;
+  color: black;
   margin-left: auto;
 }
 
 .icon {
   position: absolute;
-  width: 60vw;
-  height: 60vw;
-  /*margin: -60px 0 0 -60px;*/
+  width: 90%;
+  height: 90%;
+  /* width: 60vw; */
+  /* height: 60vw; */
+  /* margin: -60px 0 0 -60px; */
 }
 
 /* wheel-static*/
 
 .wheelStatic {
-  /*position: absolute;
-  width: 300px;
-  height: 300px;*/
-  /*margin: -60px 0 0 -60px;*/
+  /* margin: -60px 0 0 -60px; */
+  width: 20vw;
+  height: 20vw;
 }
 
 /*wheel-Animations*/
 
 .wheelSpin {
   position: absolute;
-  width: 60vw;
-  height: 60vw;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  border-style: none;
   /*margin: -60px 0 0 -60px;*/
   -webkit-animation: spin 1s linear infinite;
   -moz-animation: spin 1s linear infinite;
@@ -136,30 +208,55 @@ h1 {
   width: 90%;
 }
 
+#quote {
+  height: 20vw
+}
+
 .quote {
   font-family: 'Cabin Sketch', cursive;
   font-weight: 300;
   font-size: 25px;
-  display: block;
+  /* display: block; */
   max-width: 300px;
   margin: 0 auto;
   width: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  /*top: 10vh;*/
+}
+
+#pick {
+  position: relative;
 }
 
 #start-button {
-  display: block;
+  /* display: block; */
   max-width: 300px;
   margin: 0 auto;
   width: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*top: 18vh;*/
+  /* left: 7vw; */
+  position: relative;
 }
 
-/*#container {
+#container {
   height: 96vh;
-  box-shadow: 0em 0em 1em #DCDCDC;
+  /*box-shadow: 0em 0em 1em #DCDCDC;
   margin: 1em;
   background-color: #7bf7ab;
-  animation: fadeIn 1s;
-}*/
+  animation: fadeIn 1s;*/
+}
 
 /*responsive?*/
 
@@ -170,18 +267,37 @@ h1 {
   flex-wrap: wrap;
   flex-direction: column;
   flex-wrap: wrap;
-  /*display: block;
-  max-width: 300px;
-  margin: 0 auto;
-  width: 90%;*/
+  position: relative;
+  /*top: 15vh;*/
 }
 
 /*header, main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;}*/
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  display: flex;
+  overflow: hidden;
+}
+
+main {
+  display: flex;
+  /* height: 100%; */
+  overflow: hidden;
+  justify-content: center;
+  /* align-items: center; */
   flex-direction: column;
-}*/
+}
 
 #div-high {
   display: flex;
@@ -196,13 +312,16 @@ h1 {
 }
 
 .div-low {
-  position: absolute;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  animation: fadein 1s;
-  margin: 30% 0 0 10%;
-  top: 111vw;
-  left: 24vw;
+  /* flex-direction: row; */
+  justify-content: center;
+  /* animation: fadein 1s; */
+  margin: 4% 0 0 5%;
+  /* top: 25vh; */
+  /* left: 25vw; */
+}
+
 }
 
 #back-button {
@@ -227,13 +346,18 @@ h1 {
 --------------------------------------------- */
 
 #footer {
-  /*max-width: 300px;*/
-  margin: 0 auto;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 90%;
-  text-align: center;
+  /* max-width: 300px; */
+  /* margin: 0 auto; */
+  /* position: relative; */
+  /* left: 0; */
+  /* top: 66vh; */
+  /* width: 90%; */
+  margin-top: 3vw;
+  display: flex;
+  justify-content: center;
+  /* text-align: center; */
+  /* position: fixed; */
+  /* bottom: 0; */
 }
 
 .site-footer .icon {
@@ -252,17 +376,7 @@ h1 {
   box-sizing: content-box;
 }
 
-.col-sm-4 {
-  /*display: flex;*/
-  /*justify-content: center;
-  align-items: center;
-  display: block;
-  max-width: 150px;
-  margin: 0 auto;
-  flex-direction: column;
-  width: 300px;
-  height: 300px;*/
-}
+/*popup*/
 
 /*TRASH---------------*/
 
@@ -274,4 +388,8 @@ h1 {
   height: 120px;
   margin: -60px 0 0 -60px;
   font-size: 30px
+}*/
+
+/*@media  (min-width: ) {
+
 }*/
