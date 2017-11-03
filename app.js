@@ -20,35 +20,45 @@ function App(main) {
       imgUrl: './images/icons/diceicon.png'
     },
     {
-      label: 'Coctail',
-      className: 'coctail',
-      imgUrl: './images/icons/diceicon.png'
+      label: 'Alcohol',
+      className: 'alcohol',
+      imgUrl: './images/icons/Alcoholicon.png'
     },
     {
       label: 'Sweet',
       className: 'sweet',
-      imgUrl: './images/icons/diceicon.png'
+      imgUrl: './images/icons/sweeticon.png'
     },
     {
-      label: 'Snacks',
-      className: 'snacks',
-      imgUrl: './images/icons/diceicon.png'
+      label: 'Music',
+      className: 'Music',
+      imgUrl: './images/icons/musicicon.png'
     },
     {
-      label: 'Punishment',
-      className: 'punishment',
-      imgUrl: './images/icons/diceicon.png'
+      label: 'Podcast',
+      className: 'podcast',
+      imgUrl: './images/icons/podcasticon.png'
     },
     {
-      label: 'Movies',
-      className: 'movies',
-      imgUrl: './images/icons/diceicon.png'
+      label: 'Now Playing',
+      className: 'moviesnow',
+      imgUrl: './images/icons/movienowicon.png'
     },
     {
-      label: 'Yes or No',
-      className: 'yesno',
-      imgUrl: './images/icons/diceicon.png'
+      label: 'Movie',
+      className: 'moviehome',
+      imgUrl: './images/icons/moviehomeicon.png'
+    },
+    {
+      label: 'Gift',
+      className: 'gift',
+      imgUrl: './images/icons/gifticon.png'
     }, {
+      label: 'Game',
+      className: 'games',
+      imgUrl: './images/icons/gameicon.png'
+    },
+    {
       label: 'Choice',
       className: 'custom',
       imgUrl: './images/icons/customicon.png'
@@ -243,7 +253,7 @@ App.prototype.buildRoulette = function(modeIndex) {
 
   //ICONS & PICTURES
   this.icon = document.createElement('image');
-  this.icon.innerHTML = ("<img class='icon' src=" + '"' + self.modes[modeIndex].imgUrl + '"' + '>');
+  this.icon.innerHTML = ("<img class='picturesRound' src=" + '"' + self.modes[modeIndex].imgUrl + '"' + '>');
   this.icon.setAttribute('class', 'icon');
   divGraph.appendChild(this.icon);
 
@@ -279,6 +289,17 @@ App.prototype.buildRoulette = function(modeIndex) {
   this.answers.innerText = '';
   this.answers.setAttribute('class', 'answers');
   divlow.appendChild(this.answers);
+
+  // //Actions & Urls--------->
+  this.actions = document.createElement('actions');
+  this.actions.innerText = '';
+  this.actions.setAttribute('class', 'actions');
+  divlow.appendChild(this.actions);
+
+  this.links = document.createElement('links');
+  this.links.innerText = '';
+  this.links.setAttribute('class', 'links');
+  divlow.appendChild(this.links);
 
   // backToModes button---------------------------->
   var backButton = document.createElement('button');
@@ -335,6 +356,13 @@ App.prototype.buildRoulette = function(modeIndex) {
       self.icon.innerHTML = ("<img class='picturesRound' src=" + '"' + flush.image + '"' +
         '>');
       self.wheel.className = "wheelStatic";
+
+      //Actions:
+      if (flush.action !== undefined) {
+        self.actions.innerText = flush.action;
+        self.links.innerHTML = '<a href="' + flush.urls.foody + '">' + ' <img class="foody-logo" ' + 'src="./images/foody.png">' + '</a>';
+      }
+
     }, 3000);
   };
 

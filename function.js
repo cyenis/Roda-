@@ -13,42 +13,75 @@
 //FOOD------------------------------------------------------------------------------------->
 var foods = [{
     name: "pizza",
-    image: "./images/foods/pizza.jpg"
+    image: "./images/foods/pizza.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/pizza/"
+    }
   }, {
     name: "burrito",
-    image: "./images/foods/burrito.jpg"
+    image: "./images/foods/burrito.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/mexican/"
+    }
   }, {
     name: "enpanada",
-    image: "./images/foods/empanada.jpg"
+    image: "./images/foods/empanada.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/mexican/"
+    }
   }, {
     name: "burger",
     image: "./images/foods/burger.jpg",
+    action: "Order from:",
     url: "https://foody.com.cy/burgers"
   }, {
     name: "kebab",
-    image: "./images/foods/kebab.jpg"
+    image: "./images/foods/kebab.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/gyros/"
+    }
   }, {
     name: "sandwich",
-    image: "./images/foods/sandwich.jpg"
+    image: "./images/foods/sandwich.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/sandwich_submarine/"
+    }
   }, {
     name: "pasta",
-    image: "./images/foods/pasta.jpg"
+    image: "./images/foods/pasta.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/pasta/"
+    }
   },
   {
     name: "Souvlaki",
     image: "./images/foods/Souvlaki.jpg",
+    action: "Order from:",
     urls: {
       foody: "https://foody.com.cy/souvlakia/"
     }
   },
   {
     name: "chinese",
-    image: "./images/foods/pizza.jpg"
+    image: "./images/foods/chinese.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/kinezika/"
+    }
   },
   {
     name: "salad",
-    image: "./images/foods/pizza.jpg",
-    url: ""
+    image: "./images/foods/salad.jpg",
+    action: "Order from:",
+    urls: {
+      foody: "https://foody.com.cy/salad/"
+    }
   },
 
 
@@ -58,58 +91,170 @@ var foods = [{
 
 var destinations = [{
     name: "Bali, Indonesia",
-    image: "./images/destinations/bali.jpg"
+    image: "./images/destinations/bali.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/bali'
+    }
   }, {
     name: "London, United Kingdom",
-    image: "./images/destinations/london.jpg"
+    image: "./images/destinations/london.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/London'
+    }
   }, {
     name: "Paris, France",
-    image: "./images/destinations/paris.jpg"
+    image: "./images/destinations/paris.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/paris'
+    }
   }, {
     name: "Rome, Italy",
-    image: "./images/destinations/rome.jpg"
+    image: "./images/destinations/rome.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Rome'
+    }
   }, {
     name: "New York City, New York",
-    image: "./images/destinations/newyork.jpg"
+    image: "./images/destinations/newyork.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/newyork'
+    }
   }, {
     name: "Crete, Greece",
-    image: "./images/destinations/creta.jpg"
+    image: "./images/destinations/creta.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Crete'
+    }
   }, {
     name: "Barcelona, Spain",
-    image: "./images/destinations/barcelona.jpg"
+    image: "./images/destinations/barcelona.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Barcelona'
+    }
   }, {
     name: "Siem Reap, Cambodia",
-    image: "./images/destinations/seamreap.jpg"
+    image: "./images/destinations/seamreap.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/seamreap'
+    }
   },
   {
     name: "Prague, Czech Republic",
-    image: "./images/destinations/Prague.jpg"
+    image: "./images/destinations/Prague.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Prague'
+    }
   }, {
     name: "Phuket, Thailand",
-    image: "./images/destinations/thailand.jpg"
+    image: "./images/destinations/thailand.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Phuket'
+    }
   }, {
     name: "Instambul, Turkey",
-    image: "./images/destinations/Instambul.jpg"
+    image: "./images/destinations/Instambul.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Instambul'
+    }
   }, {
     name: "Jamaica",
-    image: "./images/destinations/Jamaica.jpg"
+    image: "./images/destinations/Jamaica.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Jamaica'
+    }
   }, {
     name: "Hoi An, Vietnam",
-    image: "./images/destinations/HoiAn.jpg"
+    image: "./images/destinations/HoiAn.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/hoian'
+    }
   }, {
     name: "Roatan, Bay Islands",
-    image: "./images/destinations/Roatan.jpg"
+    image: "./images/destinations/Roatan.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Roatan'
+    }
   },
   {
     name: "Marakech, Morocco",
-    image: "./images/destinations/marakech.jpg"
+    image: "./images/destinations/marakech.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/Marakech'
+    }
   },
   {
     name: "Rio de Janeiro, Brazil",
-    image: "./images/destinations/rio.jpg"
+    image: "./images/destinations/rio.jpg",
+    action: "Book Accomodation:",
+    urls: {
+      foody: 'https://www.booking.com/riodejaneiro'
+    }
   },
 ];
 
+//FOOD------------------------------------------------------------------------------------->
+var alcohol = [{
+    name: "Beer",
+    image: "./images/alcohol/beer.jpeg",
+    urls: {}
+  },
+  {
+    name: "Gin",
+    image: "./images/alcohol/gin.jpg",
+    urls: {}
+  }, {
+    name: "Jagermeister",
+    image: "./images/alcohol/jagermeister.png",
+    urls: {}
+  }, {
+    name: "Red Wine",
+    image: "./images/alcohol/Redwine.jpg",
+    urls: {}
+  }, {
+    name: "Rose Wine",
+    image: "./images/alcohol/rosewine.jpg",
+    urls: {}
+  }, {
+    name: "Rum",
+    image: "./images/alcohol/rum.jpg",
+    urls: {}
+  }, {
+    name: "Sangria",
+    image: "./images/alcohol/sangria.jpeg",
+    urls: {}
+  }, {
+    name: "Tequila",
+    image: "./images/alcohol/tequila.jpg",
+    urls: {}
+  }, {
+    name: "Vodka",
+    image: "./images/alcohol/vodka.png",
+    urls: {}
+  }, {
+    name: "Whiskey",
+    image: "./images/alcohol/whiskey.jpg",
+    urls: {}
+  }, {
+    name: "White Wine",
+    image: "./images/alcohol/whitewine.jpeg",
+    urls: {}
+  },
+];
 
 //PRIZES------------------------------------------------------------------------------------->
 // var prizes = [];
@@ -148,7 +293,8 @@ var dice = [{
 var items = {
   destinations: destinations,
   dice: dice,
-  foods: foods
+  foods: foods,
+  alcohol: alcohol
 };
 
 
