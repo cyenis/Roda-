@@ -20,6 +20,7 @@ var foods = [{
     name: "pizza",
     image: "./images/foods/pizza.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/pizza/"
     }
@@ -27,6 +28,7 @@ var foods = [{
     name: "burrito",
     image: "./images/foods/burrito.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/mexican/"
     }
@@ -34,6 +36,7 @@ var foods = [{
     name: "enpanada",
     image: "./images/foods/empanada.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/mexican/"
     }
@@ -41,11 +44,13 @@ var foods = [{
     name: "burger",
     image: "./images/foods/burger.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     url: "https://foody.com.cy/burgers"
   }, {
     name: "kebab",
     image: "./images/foods/kebab.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/gyros/"
     }
@@ -53,6 +58,7 @@ var foods = [{
     name: "sandwich",
     image: "./images/foods/sandwich.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/sandwich_submarine/"
     }
@@ -60,6 +66,7 @@ var foods = [{
     name: "pasta",
     image: "./images/foods/pasta.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/pasta/"
     }
@@ -68,6 +75,7 @@ var foods = [{
     name: "Souvlaki",
     image: "./images/foods/Souvlaki.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/souvlakia/"
     }
@@ -76,6 +84,7 @@ var foods = [{
     name: "chinese",
     image: "./images/foods/chinese.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/kinezika/"
     }
@@ -84,6 +93,7 @@ var foods = [{
     name: "salad",
     image: "./images/foods/salad.jpg",
     action: "Order from:",
+    logo: "./images/foody.png",
     urls: {
       foody: "https://foody.com.cy/salad/"
     }
@@ -98,6 +108,7 @@ var destinations = [{
     name: "Bali",
     image: "./images/destinations/bali.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/bali'
     }
@@ -105,6 +116,7 @@ var destinations = [{
     name: "London",
     image: "./images/destinations/london.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/London'
     }
@@ -112,6 +124,7 @@ var destinations = [{
     name: "Paris",
     image: "./images/destinations/paris.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/paris'
     }
@@ -119,6 +132,7 @@ var destinations = [{
     name: "Rome",
     image: "./images/destinations/rome.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Rome'
     }
@@ -126,6 +140,7 @@ var destinations = [{
     name: "New York",
     image: "./images/destinations/newyork.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/newyork'
     }
@@ -133,6 +148,7 @@ var destinations = [{
     name: "Crete",
     image: "./images/destinations/creta.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Crete'
     }
@@ -140,6 +156,7 @@ var destinations = [{
     name: "Barcelona",
     image: "./images/destinations/barcelona.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Barcelona'
     }
@@ -147,6 +164,7 @@ var destinations = [{
     name: "Siem Reap",
     image: "./images/destinations/seamreap.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/seamreap'
     }
@@ -155,6 +173,7 @@ var destinations = [{
     name: "Prague",
     image: "./images/destinations/Prague.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Prague'
     }
@@ -162,6 +181,7 @@ var destinations = [{
     name: "Phuket",
     image: "./images/destinations/thailand.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Phuket'
     }
@@ -169,6 +189,7 @@ var destinations = [{
     name: "Instambul",
     image: "./images/destinations/Instambul.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Instambul'
     }
@@ -176,6 +197,7 @@ var destinations = [{
     name: "Jamaica",
     image: "./images/destinations/Jamaica.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Jamaica'
     }
@@ -183,6 +205,7 @@ var destinations = [{
     name: "Hoi An",
     image: "./images/destinations/HoiAn.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/hoian'
     }
@@ -190,6 +213,7 @@ var destinations = [{
     name: "Roatan",
     image: "./images/destinations/Roatan.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Roatan'
     }
@@ -198,6 +222,7 @@ var destinations = [{
     name: "Marakech",
     image: "./images/destinations/marakech.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/Marakech'
     }
@@ -206,6 +231,7 @@ var destinations = [{
     name: "Rio de Janeiro",
     image: "./images/destinations/rio.jpg",
     action: "Book Accomodation:",
+    logo: "./images/booking.png",
     urls: {
       foody: 'https://www.booking.com/riodejaneiro'
     }
@@ -260,6 +286,128 @@ var alcohol = [{
     urls: {}
   },
 ];
+
+
+
+//Games------------------------------------------------------------------------------------->
+var games = [{
+    name: "ARKANOID",
+    image: "./images/games/cristian.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://cristiandiazz.github.io/arkanoid/"
+    }
+  },
+  {
+    name: "BLACKJACK",
+    image: "./images/games/dafne.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://dafneolca.github.io/BlackJack/"
+    }
+  },
+  {
+    name: "TICTAC",
+    image: "./images/games/felice.jpg",
+    action: "Play:",
+    logo: "./images/play.jpg",
+    urls: {
+      foody: "https://xxxelf.github.io/game/"
+    }
+  },
+  {
+    name: "WACK",
+    image: "./images/games/torgeir.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://torgeirbeyer.github.io/project1-ironhack/"
+    }
+  },
+  {
+    name: "GOOGLED",
+    image: "./images/games/cristina.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://crismoreno.github.io/googled/"
+    }
+  },
+  {
+    name: "HOMER",
+    image: "./images/games/juan.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://jcuadrad.github.io/homeristoofat/"
+    }
+  },
+  {
+    name: "COLORIFY",
+    image: "./images/games/clara.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://claraameller.github.io/colorify/"
+    }
+  },
+  {
+    name: "SUBWARFARE",
+    image: "./images/games/jordi.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://joordiii.github.io/project_game/"
+    }
+  },
+  {
+    name: "BRUCE",
+    image: "./images/games/sara.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://sarahfontes.github.io/Bruce-in-the-Maz"
+    }
+
+  },
+  {
+    name: "DON'T DRINK",
+    image: "./images/games/dominik.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://dlasch089.github.io/first-game/"
+    }
+  },
+  {
+    name: "DIVE",
+    image: "./images/games/lucas.jpg",
+    action: "Play:",
+    logo: "./images/play.png",
+    urls: {
+      foody: "https://lacazeto.github.io/ironhack_project1/"
+    }
+
+  }
+
+
+];
+// CLARA AMELLER -->https://claraameller.github.io/colorify/
+// DOM https://dlasch089.github.io/first-game/
+// SARAH FONTES --> https://sarahfontes.github.io/Bruce-in-the-Maze/
+// https://joordiii.github.io/project_game/
+// CRISTIAN DIAZ --> https://cristiandiazz.github.io/arkanoid/
+// DAFNE OLCA --> https://dafneolca.github.io/BlackJack/
+// FELICE POZZI --> https://xxxelf.github.io/game/
+// JUAN CUADRA --> https://jcuadrad.github.io/homeristoofat/
+// TORGEIR BEYER --> https://torgeirbeyer.github.io/project1-ironhack/
+// SARAH FONTES --> https://sarahfontes.github.io/Bruce-in-the-Maze/
+// CRISTINA MORENO --> https://crismoreno.github.io/googled/
+// https://lacazeto.github.io/ironhack_project1/ lucas Cazeto
+
+
 
 //PRIZES------------------------------------------------------------------------------------->
 // var prizes = [];
@@ -368,7 +516,8 @@ var items = {
   alcohol: alcohol,
   euro: euro,
   webdev: webdev,
-  music: music
+  music: music,
+  games: games
 };
 
 

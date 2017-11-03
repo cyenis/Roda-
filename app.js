@@ -95,7 +95,7 @@ App.prototype.buildSplash = function() {
   //Name of the Game/Branding:
   var text = document.createElement('h2');
   text.innerHTML = 'Life is a sum of random facts!'.toUpperCase();
-  text.setAttribute('class', 'quote');
+  text.setAttribute('class', 'quote2');
   divHigh.appendChild(text);
 
   var divMid = document.createElement('div');
@@ -373,7 +373,7 @@ App.prototype.buildRoulette = function(modeIndex) {
       // Actions:
       if (flush.action !== undefined) {
         self.actions.innerText = flush.action;
-        self.links.innerHTML = '<a href="' + flush.urls.foody + '">' + ' <img class="foody-logo" ' + 'src="./images/foody.png" >' + '</a>';
+        self.links.innerHTML = '<a href="' + flush.urls.foody + '">' + ' <img class="link-logo" ' + 'src="' + flush.logo + '" >' + '</a>';
       }
 
 

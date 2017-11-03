@@ -10,7 +10,7 @@ html {
 
 .links {
   position: absolute;
-  bottom: 15vw;
+  bottom: 14vw;
   left: 55vw;
 }
 
@@ -193,6 +193,8 @@ h1 {
   left: 30%;
 }
 
+.link-logo {}
+
 /*Start Screen etc*/
 
 .logo {
@@ -228,6 +230,24 @@ h1 {
   flex-wrap: wrap;
   position: relative;
   /*top: 10vh;*/
+}
+
+.quote2 {
+  font-family: 'Cabin Sketch', cursive;
+  font-weight: 300;
+  font-size: 25px;
+  /* display: block; */
+  max-width: 300px;
+  margin: 0 auto;
+  width: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+  top: 10vh;
 }
 
 #pick {
